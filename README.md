@@ -12,6 +12,12 @@ examples/hello.py:1 # -*- mode: python -*-
 $ modeselector examples/hello
 examples/hello:1 // -*- mode: javascript -*-
 
+$ modeselector examples/hello.pl
+examples/hello.pl:3 # Local Variables:
+examples/hello.pl:4 # eval (setq tab-width 2)
+examples/hello.pl:5 # eval (setq sws-tab-width 2)
+examples/hello.pl:6 # End:
+
 $ modeselector examples/hello.sh
 
 $
