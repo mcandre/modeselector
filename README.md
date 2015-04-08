@@ -38,6 +38,8 @@ modeselector is a small, cross-platform command line tool for reporting informat
 * [Vim](http://vim.wikia.com/wiki/Modeline_magic)
 * [Emacs](http://www.gnu.org/software/emacs/manual/html_node/emacs/Specifying-File-Variables.html)
 
+This tool has no association with the electronic band [Modeselektor](https://www.youtube.com/watch?v=9QHL6GzfnMA).
+
 # REQUIREMENTS
 
 * [Ruby](https://www.ruby-lang.org/) 1.9+
