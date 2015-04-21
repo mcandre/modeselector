@@ -1,4 +1,4 @@
-require 'version'
+require_relative 'version'
 
 #
 # Modeselector - extract mode line variables from source code files
