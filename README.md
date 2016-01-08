@@ -3,7 +3,7 @@
 # EXAMPLES
 
 ```
-$ modeselector examples/hello.rb 
+$ modeselector examples/hello.rb
 examples/hello.rb:1 # vim: set filetype=ruby
 
 $ modeselector examples/hello.py
@@ -42,7 +42,7 @@ This tool has no association with the electronic band [Modeselektor](https://www
 
 # REQUIREMENTS
 
-* [Ruby](https://www.ruby-lang.org/) 1.9+
+* [Ruby](https://www.ruby-lang.org/) 2.0+
 
 # INSTALL
 
