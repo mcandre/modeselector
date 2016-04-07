@@ -1,0 +1,4 @@
+# vi: set filetype=ruby
+
+Vagrant.configure do |config|
+end

@@ -6,6 +6,7 @@ Given(/^the program has finished$/) do
   @cucumber_hello_sh = `modeselector examples/hello.sh`
   @cucumber_hello_pl = `modeselector examples/hello.pl`
   @cucumber_hello = `modeselector examples/hello`
+  @cucumber_vagrant = `modeselector examples/Vagrantfile`
   @cucumber_version = `modeselector -v`
 end
 
@@ -31,6 +32,10 @@ Then(/^the output is correct for each test$/) do
 
   lines_hello_sh = @cucumber_hello_sh.split("\n")
   expect(lines_hello_sh.length).to eq(0)
+
+  lines_vagrant = @cucumber_vagrant.split("\\n")
+  expect(lines_vagrant.length).to eq(1)
+  expect(lines_vagrant[0]).to match(%r(# vi: set filetype=ruby))
 
   lines_version = @cucumber_version.split("\n")
   expect(lines_version.length).to eq(1)

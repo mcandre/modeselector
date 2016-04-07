@@ -15,7 +15,7 @@ module Modeselector
     results = []
 
     File.foreach(path).with_index do |line, line_number|
-      if line =~ /(vim:\s)|(-\*- mode:.+-\*-)/
+      if line =~ /(vi(m)?:\s)|(-\*- mode:.+-\*-)/
         results << [line_number + 1, line.chomp]
       end
     end
