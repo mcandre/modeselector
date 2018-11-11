@@ -2,7 +2,7 @@
 
 # EXAMPLES
 
-```
+```console
 $ modeselector examples/hello.rb
 examples/hello.rb:1 # vim: set filetype=ruby
 
@@ -44,11 +44,18 @@ This tool has no association with the electronic band [Modeselektor](https://www
 
 * [Ruby](https://www.ruby-lang.org/) 2.0+
 
+## Optional
+
+* [GNU findutils](https://www.gnu.org/software/findutils/)
+* [stank](https://github.com/mcandre/stank) (e.g. `go get github.com/mcandre/stank/...`)
+* [Python](https://www.python.org) 3+ (for yamllint)
+* [Node.js](https://nodejs.org/en/) (for eclint)
+
 # INSTALL
 
 Install via [RubyGems](http://rubygems.org/):
 
-```
+```console
 $ gem install modeselector
 ```
 
@@ -62,7 +69,7 @@ FreeBSD
 
 Keep the code functioning:
 
-```
+```console
 $ rake test
 ```
 
@@ -70,7 +77,7 @@ $ rake test
 
 Keep the code tidy:
 
-```
+```console
 $ rake lint
 ```
 

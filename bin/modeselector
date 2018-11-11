@@ -5,48 +5,48 @@ require 'optparse'
 require 'modeselector'
 
 def main
-  option = OptionParser.new do |option|
-    option.banner = 'Usage: modeselector [options] <path> <path> <path>...'
+    option = OptionParser.new do |option|
+        option.banner = 'Usage: modeselector [options] <path> <path> <path>...'
 
-    option.on('-h', '--help', 'Print usage info') do
-      puts option
-      exit
+        option.on('-h', '--help', 'Print usage info') do
+            puts option
+            exit
+        end
+
+        option.on('-v', '--version', 'Print version info') do
+            puts "modeselector #{Modeselector::VERSION}"
+            exit
+        end
     end
 
-    option.on('-v', '--version', 'Print version info') do
-      puts "modeselector #{Modeselector::VERSION}"
-      exit
+    option.parse!
+
+    if ARGV.length < 1
+        puts option
+        exit 1
     end
-  end
 
-  option.parse!
+    paths = ARGV
 
-  if ARGV.length < 1
-    puts option
-    exit 1
-  end
+    paths.each do |path|
+        modelines = Modeselector.modelines(path)
 
-  paths = ARGV
-
-  paths.each do |path|
-    modelines = Modeselector.modelines(path)
-
-    if modelines.length > 0
-      modelines.each do |modeline|
-        line_number, ml = modeline
-        puts "#{path}:#{line_number} #{ml}"
-      end
+        if modelines.length > 0
+            modelines.each do |modeline|
+                line_number, ml = modeline
+                puts "#{path}:#{line_number} #{ml}"
+            end
+        end
     end
-  end
 end
 
 begin
-  main
-# User may quit before completion.
+    main
+    # User may quit before completion.
 rescue Interrupt
-  nil
-# May be piped to another program (e.g. `less`),
-# which is quit before completion.
+    nil
+    # May be piped to another program (e.g. `less`),
+    # which is quit before completion.
 rescue Errno::EPIPE, Errno::EMFILE
-  nil
+    nil
 end
