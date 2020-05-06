@@ -1,3 +1,5 @@
-// -*- mode: javascript -*-
-
-console.log('Hello World!');
+#!/bin/sh
+set -eu
+IFS="$(printf '%b_' '\n\t ')"
+IFS="${IFS%_}"
+echo 'Hello World!'
