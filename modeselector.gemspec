@@ -16,7 +16,7 @@ Gem::Specification.new { |s|
     s.files = Dir['lib/*.rb'] + ['LICENSE.md']
     s.homepage = 'https://github.com/mcandre/modeselector'
 
-    s.required_ruby_version = '>= 2.7'
+    s.required_ruby_version = '>= 2.7.1'
 
     s.add_development_dependency 'rake', '~> 12.3.3'
     s.add_development_dependency 'reek', '~> 1.3'

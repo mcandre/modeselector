@@ -42,7 +42,7 @@ This tool has no association with the electronic band [Modeselektor](https://www
 
 # REQUIREMENTS
 
-* [Ruby](https://www.ruby-lang.org/) 2.7+
+* [Ruby](https://www.ruby-lang.org/) 2.7.1+
 
 ## Optional
 
